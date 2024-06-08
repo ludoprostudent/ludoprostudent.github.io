@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bootstrap 5 Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- home page header -->
+    <div class="home-page-logo" style="height: 300px">
+        <img src="images/logo.png" class="logo-image" style="width:150px; height:180px;">
+
+        <h1 class="header-title" style="font-size: 64px;">Ottawa Dog Grooming</h1>
+    </div>
+
+    <!-- sticky navigation bar -->
+    <nav id="navbar" class="navbar navbar-expand-sm sticky-top nav-bar justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item navbar-custom-item">
+                <!-- TODO: change text -->
+                <a class="nav-link" href="index.html" style="color: white;">Back to Homepage</a>
+            </li>
+            <li class="nav-item navbar-custom-item">
+                <a class="nav-link" href="index.html#services"style="color: white;">Services</a>
+            </li>
+            <li class="nav-item navbar-custom-item">
+                <a class="nav-link" href="index.html#team"style="color: white;">Our Team</a>
+            </li>
+            <li class="nav-item navbar-custom-item">
+                <a class="nav-link" href="index.html#about"style="color: white;">About Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- appt info -->
+    <div id="about-appt" class="sub-section">
+        <h2 class="section-title">
+            About your Appointment:
+        </h2>
+
+        <div class="row">
+            <div class="col-md-6 appt-select-container-left">
+                <div>
+                    <label for="groomer-sel" class="form-label">Groomer</label>
+                    <span class="form-required-label">*</span>
+                    <!-- from: https://getbootstrap.com/docs/5.0/forms/select/ -->
+                    <select id="groomer-sel" class="form-select appt-select-input">
+                        <option selected disabled>Select a groomer...</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Mary Jane">Mary Jane</option>
+                        <option value="Rick Roll">Rick Roll</option>
+                        <option value="Tina Beck">Tina Beck</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 appt-select-container-right">
+                <div>
+                    <label for="datetimepicker" class="form-label">Date-time</label>
+                    <span class="form-required-label">*</span>
+                    <!-- from: https://www.youtube.com/watch?v=weOHpT2w1Bg&ab_channel=FrontendPaathshala -->
+                    <div class="form-group appt-select-input">
+                        <div id="datetimepicker" class="input-group">
+                            <input type="datetime-local" class="form-control" placeholder="Select a date and time" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- client info -->
+    <div id="client-info" class="sub-section">
+        <h2 class="section-title">
+            Your Information:
+        </h2>
+
+        <div style="display: flex; justify-content: center">
+            <div style="width: 1000px">
+                <div class="row">
+                    <div class="col-md-4 appt-select-container-left">
+                        <div>
+                            <div class="col-md-4">
+                                <label for="first-name-input" class="form-label">First name</label>
+                                <span class="form-required-label">*</span>
+                                <input id="first-name-input" type="text" class="form-control appt-select-input"
+                                    placeholder="Enter first name...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 appt-select-container-center">
+                        <div>
+                            <div class="col-md-4">
+                                <label for="last-name-input" class="form-label">Last name</label>
+                                <span class="form-required-label">*</span>
+                                <input id="last-name-input" type="text" class="form-control appt-select-input"
+                                    placeholder="Enter last name...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 appt-select-container-right">
+                        <div>
+                            <div class="col-md-4">
+                                <label for="email-input" class="form-label">Email</label>
+                                <span class="form-required-label">*</span>
+                                <input id="email-input" type="email" class="form-control appt-select-input"
+                                    placeholder="Enter email...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pet info -->
+    <div id="dog-info" class="sub-section">
+        <h2 class="section-title">
+            About your Pet(s):
+        </h2>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <label for="num-dog-sel" class="form-label" style="padding-right: 15px">Number of Dogs:</label>
+            <select id="num-dog-sel" class="form-select appt-select-input" style="width: 90px">
+                <option selected value="1">One</option>
+                <option value="2">Two</option>
+            </select>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <h6> *We only allow a maximum booking of 2 pets at once.</h6>
+        </div>
+
+        <!-- first dog section -->
+        <div id="dog-1-section" class="container mt-5 appt-dog-card">
+            <div class="card"  style="border: inherit;">
+                <div class="card-body">
+                    <h4 class="card-title"> Dog #1:</h4>
+                    <div class="row" style="padding-bottom: 20px">
+                        <div class="col-md-4">
+                            <label for="dog-1-name" class="form-label">Dog name</label>
+                            <span class="form-required-label">*</span>
+                            <input id="dog-1-name" type="text" class="form-control appt-select-input"
+                                placeholder="Enter dog name...">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="dog-1-size" class="form-label">Dog size</label>
+                            <span class="form-required-label">*</span>
+                            <select id="dog-1-size" class="form-select appt-select-input">
+                                <option selected disabled>Select a size...</option>
+                                <option value="1">Small (2-25lbs)</option>
+                                <option value="2">Medium (25-75lbs)</option>
+                                <option value="3">Large (75+lbs)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="package-sel-1" class="form-label">Service Selected</label>
+                            <span class="form-required-label">*</span>
+                            <!-- from: https://getbootstrap.com/docs/5.0/forms/select/ -->
+                            <select id="package-sel-1" class="form-select appt-select-input">
+                                <option selected disabled>Select a service...</option>
+                                <option value="Regular Package">Regular Package</option>
+                                <option value="Premium Package">Premium Package</option>
+                                <option value="Individual Service">Individual Service</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label class="form-label">Notes: Is there anything else we should know? Triggers, fears, previous
+                        surgeries, etc.</label>
+                    <textarea class="form-control appt-note-input" placeholder="Enter text..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- second dog section -->
+        <div id="dog-2-section" class="container mt-5 appt-dog-card" style="display: none;">
+            <div class="card" style="border: inherit;">
+                <div class="card-body">
+                    <h4 class="card-title"> Dog #2:</h4>
+                    <div class="row" style="padding-bottom: 20px">
+                        <div class="col-md-4">
+                            <label for="dog-2-name" class="form-label">Dog name</label>
+                            <span class="form-required-label">*</span>
+                            <input id="dog-2-name" type="text" class="form-control appt-select-input"
+                                placeholder="Enter dog name...">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="dog-2-size" class="form-label">Dog size</label>
+                            <span class="form-required-label">*</span>
+                            <select id="dog-2-size" class="form-select appt-select-input">
+                                <option selected disabled>Select a size...</option>
+                                <option value="1">Small (2-25lbs)</option>
+                                <option value="2">Medium (25-75lbs)</option>
+                                <option value="3">Large (75+lbs)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="package-sel-2" class="form-label">Service Selected</label>
+                            <span class="form-required-label">*</span>
+                            <!-- from: https://getbootstrap.com/docs/5.0/forms/select/ -->
+                            <select id="package-sel-2" class="form-select appt-select-input">
+                                <option selected disabled>Select a service...</option>
+                                <option value="Regular Package">Regular Package</option>
+                                <option value="Premium Package">Premium Package</option>
+                                <option value="Individual Service">Individual Service</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label class="form-label">Notes: Is there anything else we should know? Triggers, fears, previous
+                        surgeries, etc.</label>
+                    <textarea class="form-control appt-note-input" placeholder="Enter text..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 50px;">
+        <div class="col-md-6 appt-select-container-left">
+            <a type="button" class="btn cancel-appt-button" href="index.html"><i class="bi bi-calendar-x"> </i>Cancel</i></a>
+        </div>
+        <div class="col-md-6 appt-select-container-right">
+            <button type="button" onclick="setConfirmationMessage()" class="btn book-appt-button" data-bs-toggle="modal"
+                data-bs-target="#appt-confirmation">Book <i class="bi bi-calendar-check"></i></button>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="extended-footer">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card extended-footer-card">
+                    <h5 class="card-title"><b>How to contact us</b></h5>
+                    <p class="card-text"><i class="bi bi-telephone"></i> Phone number: (613)-364-5653 (613-DOG-LOVE)</p>
+                    <p class="card-text"><i class="bi bi-envelope"></i> E-mail: info@ottawagrooming.ca</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card extended-footer-card">
+                    <h5 class="card-title"><b>Hours</b></h5>
+                    <p class="card-text">Monday to Friday: 10AM - 7PM</p>
+                    <p class="card-text">Saturday: 8AM - 8PM</p>
+                    <p class="card-text">Sunday: 8AM - 6PM</p>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card extended-footer-card">
+                    <h5 class="card-title"><b>Location</b></h5>
+                    <p class="card-text"><i class="bi bi-geo-alt"></i> 123 Dawg Street. Ottawa, ON</p>
+                </div>
+            </div>
+        </div>
+        <h6 style="padding-top: 10px;">
+            © Ottawa Dog Grooming | Website designed by Ludovic Provost
+        </h6>
+    </div>
+
+
+    <!-- appointment confirmation MODAL -->
+    <!-- from: https://www.w3schools.com/bootstrap5/bootstrap_modal.php -->
+    <div class="modal fade" id="appt-confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: center; background-color: #fed758;">
+                    <h2 class="modal-title">Appointment Confirmed!</h2>
+                </div>
+                <div class="modal-body" style="display: flex; flex-direction: column; align-items: center;">
+                    <p id="booking-number"></p>
+                    <p id="groomer-confirm"></p>
+                    <p id="time-confirm"></p>
+                    <p id="dog-1-confirm"></p>
+                    <p id="dog-2-confirm"></p>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+                    <h5>See you soon!</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS for date/time picker -->
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker').datetimepicker();
+        });
+    </script>
+
+    <!-- JS for number of dogs section -->
+    <script type="text/javascript">
+        document.getElementById("num-dog-sel").addEventListener("change", function () {
+            var dog_2_section = document.getElementById("dog-2-section");
+            var dog_2_confirm = document.getElementById("dog-2-confirm");
+            var val = this.value;
+
+            if (val === '2') {
+                dog_2_section.style.display = "block";
+                dog_2_confirm.style.display = "block";
+            } else {
+                dog_2_section.style.display = "none";
+                dog_2_confirm.style.display = "none";
+            }
+        });
+    </script>
+
+    <!-- JS for confirmation modal -->
+    <script type="text/javascript">
+        function setConfirmationMessage() {
+            // init base messages
+            let booking_base_txt = "Booking Number: ";
+            let groomer_base_txt = "Groomer: ";
+            let time_base_txt = "Time: "
+            let package_base_txt = " is booked for a ";
+
+            // create and set random booking number
+            var booking_num = Math.floor(Math.random() * 10000000);
+            document.getElementById("booking-number").innerHTML = booking_base_txt.concat(booking_num);
+            document.getElementById("booking-number").style.fontWeight = "bold";
+
+            // set groomer
+            let groomer_selected = document.getElementById("groomer-sel").value;
+            document.getElementById("groomer-confirm").innerHTML = groomer_base_txt.concat(groomer_selected);
+
+            // set time
+            let dateTimeValue = document.querySelector('#datetimepicker input[type="datetime-local"]').value;
+
+            let dateTime = new Date(dateTimeValue);
+
+            let year = dateTime.getFullYear();
+            let month = String(dateTime.getMonth() + 1).padStart(2, '0');
+            let day = String(dateTime.getDate()).padStart(2, '0');
+            let hours = String(dateTime.getHours()).padStart(2, '0');
+            let minutes = String(dateTime.getMinutes()).padStart(2, '0');
+
+            let formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}`;
+            document.getElementById("time-confirm").innerHTML = time_base_txt.concat(dateTimeValue);
+
+            // set packge for each dog
+            let dog_1_name = document.getElementById("dog-1-name").value;
+            let dog_1_package = document.getElementById("package-sel-1").value;
+            document.getElementById("dog-1-confirm").innerHTML = (dog_1_name.concat(package_base_txt)).concat(dog_1_package);
+
+            if (document.getElementById("num-dog-sel").value === '2') {
+                let dog_2_name = document.getElementById("dog-2-name").value;
+                let dog_2_package = document.getElementById("package-sel-2").value;
+                document.getElementById("dog-2-confirm").innerHTML = (dog_2_name.concat(package_base_txt)).concat(dog_2_package);
+            }
+        }
+    </script>
+</body>
+
+</html>

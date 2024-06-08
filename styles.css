@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'pawwow';
+    src: url('Meows-VGWjy.ttf');
+}
+
+.nav-bar {
+    background-color: #283152;
+}
+
+.navbar-custom-item {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.home-page-logo {
+    display: flex;
+    background-color: #283152; 
+    /* B8DFED */
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+ 
+.logo-image {
+    width: 200px;
+    height: 250px;
+    padding-right: 20px;
+}
+
+.header-title {
+    font-size: 100px;
+    color: white;
+    font-family: 'pawwow';
+}
+
+.book-now-button {
+    background-color: #fed758;
+    width: 120px;
+}
+
+.book-now-button:hover {
+    background-color: #DFBE51;
+}
+
+.book-appt-button {
+    background-color: #fed758;
+    width: 150px;
+    font-size: 26px;
+}
+
+.book-appt-button:hover {
+    background-color: #DFBE51;
+}
+
+.cancel-appt-button {
+    background-color: #DDDDDD;
+    width: 150px;
+    font-size: 26px;
+}
+
+.cancel-appt-button:hover {
+    background-color: #BFBFBF;
+}
+
+.section {
+    background-color: white;
+    padding-bottom: 40px;
+}
+
+.sub-section {
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.section-title {
+    display: flex;
+    padding: 20px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.service-image {
+    width:fit-content;
+    object-fit:fill;
+    height: 300px;
+}
+
+.service-card-bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+}
+
+.ad-image {
+    width:fit-content;
+    object-fit:fill;
+}
+
+.employee-image {
+    /* border: 1px solid #283152; */
+    width:fit-content;
+    object-fit:contain;
+    height: 300px;
+    width: 100%;
+    background-color: #fed758;
+}
+
+.pronoun-badge {
+    background-color: #283152;
+}
+
+.section-divider {
+    background-color: #283152;
+
+}
+
+.ad-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container {
+    height: 400px;
+}
+
+.info-card {
+    padding-left: 20px;
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
+    height: 120px;
+}
+
+.appt-select-container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* meant for the right-most container, keeps everything closer to center */
+.appt-select-container-right {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* meant for the left-most container, keeps everything closer to center */
+.appt-select-container-left {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.appt-select-input {
+    display: flex;
+    width: 300px;
+}
+
+.appt-note-input {
+    width: 100%;
+    height: 100px;
+    text-indent: 0;
+    text-align: left;
+}
+
+.appt-dog-card {
+    border:none;
+    width: 1000px;
+    padding-bottom: 10px;
+}
+
+.form-required-label {
+    color: red;
+}
+
+gmp-map {
+    height: 100%;
+  }
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fed758;
+    height: 50px;
+}
+
+.extended-footer {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fed758;
+}
+
+.extended-footer-card {
+    border: none;
+    height: 160px;
+    width:400px;
+    background-color: inherit;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
